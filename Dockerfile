@@ -1,0 +1,7 @@
+FROM openjdk:17
+
+COPY target/01-SERVICE_REGISTERY_APP-0.0.1-SNAPSHOT.jar  /usr/dev/
+
+WORKDIR /usr/dev/
+
+ENTRYPOINT ["java", "-jar", "01-SERVICE_REGISTERY_APP-0.0.1-SNAPSHOT.jar"]
