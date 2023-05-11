@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: springboot
-          image: rahulwagh17/jhooq-docker-demo:jhooq-docker-demo
+          image: mahamkali/jhooq-docker-demo:jhooq-docker-demo
           ports:
-            - containerPort: 8080
+            - containerPort: 8761
           env:
             - name: PORT
-              value: "8080"
+              value: "8761"
 ---
 apiVersion: v1
 kind: Service
@@ -29,6 +29,6 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 8761
   selector:
     app: jhooq-springboot
